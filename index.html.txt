@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portafolio Ciberpunk</title>
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Orbitron', sans-serif;
+      background-color: #0a0a0a;
+      color: #e0e0e0;
+      transition: background-color 0.5s, color 0.5s;
+    }
+    .navbar {
+      background-color: #000;
+      border-bottom: 2px solid cyan;
+    }
+    .navbar-brand, .nav-link {
+      color: cyan !important;
+    }
+    .hero {
+      text-align: center;
+      padding: 80px 20px;
+      background: linear-gradient(180deg, #0a0a0a, #111);
+    }
+    .hero img {
+      width: 150px;
+      border-radius: 50%;
+      border: 3px solid cyan;
+      margin-bottom: 20px;
+    }
+    .card {
+      background-color: #111;
+      border: 1px solid cyan;
+      color: #fff;
+      transition: transform 0.3s;
+    }
+    .card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 20px cyan;
+    }
+    .footer {
+      background-color: #000;
+      text-align: center;
+      padding: 20px;
+      border-top: 2px solid cyan;
+    }
+    .footer a {
+      color: cyan;
+      margin: 0 10px;
+      font-size: 1.5rem;
+    }
+    .btn-darkmode {
+      background: cyan;
+      color: #000;
+      border: none;
+      font-weight: bold;
+    }
+    .dark-mode {
+      background-color: #f0f0f0;
+      color: #000;
+    }
+    .dark-mode .navbar {
+      background-color: #fff;
+      border-bottom: 2px solid #000;
+    }
+    .dark-mode .navbar-brand, .dark-mode .nav-link {
+      color: #000 !important;
+    }
+    .dark-mode .card {
+      background-color: #fff;
+      border: 1px solid #000;
+      color: #000;
+    }
+    .dark-mode .footer {
+      background-color: #fff;
+      border-top: 2px solid #000;
+    }
+    .dark-mode .footer a {
+      color: #000;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">⚡ Portafolio</a>
+      <button class="btn btn-darkmode ms-auto" id="toggleDark">Modo Dark</button>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <img src="https://lh3.googleusercontent.com/a/ACg8ocKAh8p9RpjNY4vMtTZt6wro_TdANQCS-2LY7c1j7Ajl-YeOGu2x=s400-c" alt="Foto Perfil">
+    <h1>👩‍💻 Adriana Morillo</h1>
+    <p>Frontend Developer | UI/UX Minimalista | Estética Ciberpunk</p>
+  </section>
+
+  <!-- Stack Tecnológico -->
+  <section class="container my-5">
+    <h2 class="text-center text-cyan mb-4">🚀 Stack Tecnológico</h2>
+    <div class="row g-4">
+      <div class="col-md-4"><div class="card p-3 text-center">HTML5</div></div>
+      <div class="col-md-4"><div class="card p-3 text-center">CSS3</div></div>
+      <div class="col-md-4"><div class="card p-3 text-center">JavaScript</div></div>
+      <div class="col-md-4"><div class="card p-3 text-center">Bootstrap</div></div>
+      <div class="col-md-4"><div class="card p-3 text-center">React</div></div>
+      <div class="col-md-4"><div class="card p-3 text-center">GitHub</div></div>
+    </div>
+  </section>
+
+  <!-- Proyectos -->
+  <section class="container my-5">
+    <h2 class="text-center mb-4">💡 Proyectos</h2>
+    <div class="text-center mb-3">
+      <button class="btn btn-outline-info filter-btn" data-filter="all">Todos</button>
+      <button class="btn btn-outline-info filter-btn" data-filter="web">Web</button>
+      <button class="btn btn-outline-info filter-btn" data-filter="app">App</button>
+      <button class="btn btn-outline-info filter-btn" data-filter="design">Diseño</button>
+    </div>
+    <div class="row g-4" id="projects">
+      <!-- 9 tarjetas -->
+      <div class="col-md-4 project web"><div class="card"><img src="https://i.pinimg.com/1200x/bd/26/e2/bd26e2daa4737971d3934fc005968868.jpg" class="card-img-top"><div class="card-body">Proyecto Web 1</div></div></div>
+      <div class="col-md-4 project web"><div class="card"><img src="https://i.pinimg.com/736x/6c/fe/71/6cfe71363423779f9dd4a066d2387d2e.jpg" class="card-img-top"><div class="card-body">Proyecto Web 2</div></div></div>
+      <div class="col-md-4 project web"><div class="card"><img src="https://i.pinimg.com/1200x/1a/33/f6/1a33f6edb024388758297e4f7a4bb179.jpg" class="card-img-top"><div class="card-body">Proyecto Web 3</div></div></div>
+      <div class="col-md-4 project app"><div class="card"><img src="https://i.pinimg.com/736x/07/f4/21/07f421ac1791895d8479d6de6259dabc.jpg" class="card-img-top"><div class="card-body">Proyecto App 1</div></div></div>
+      <div class="col-md-4 project app"><div class="card"><img src="https://i.pinimg.com/1200x/a2/1f/7f/a21f7fe054a2354898be2bc3163980f2.jpg" class="card-img-top"><div class="card-body">Proyecto App 2</div></div></div>
+      <div class="col-md-4 project app"><div class="card"><img src="https://i.pinimg.com/1200x/83/ba/66/83ba663b61b37effb82d3b8228efdee3.jpg" class="card-img-top"><div class="card-body">Proyecto App 3</div></div></div>
+      <div class="col-md-4 project design"><div class="card"><img src="https://i.pinimg.com/1200x/4e/d9/55/4ed9551939c4af7745227b184dce4fc6.jpg" class="card-img-top"><div class="card-body">Proyecto Diseño 1</div></div></div>
+      <div class="col-md-4 project design"><div class="card"><img src="https://i.pinimg.com/1200x/b2/a1/ec/b2a1ec3b2436dfca4ef87bf689797a9b.jpg" class="card-img-top"><div class="card-body">Proyecto Diseño 2</div></div></div>
+      <div class="col-md-4 project design"><div class="card"><img src="https://i.pinimg.com/736x/40/7d/91/407d9107a19e32338236fd28a152e344.jpg" class="card-img-top"><div class="card-body">Proyecto Diseño 3</div></div></div>
+    </div>
+  </section>
+
+  <!-- Experiencia Laboral -->
+  <section class="container my-5">
+  <h2 class="text-center mb-4">💼 Experiencia Laboral</h2>
+  <div class="row justify-content-center g-4">
+    <div class="col-md-4">
+      <div class="card">
+        <img src="https://i.pinimg.com/736x/d3/d2/c9/d3d2c95e12cf3d8a07e5cccb788af8c7.jpg" class="card-img-top">
+        <div class="card-body text-center">Atención al Cliente</div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card">
+        <img src="https://i.pinimg.com/736x/3f/57/fb/3f57fb8248d95ec5f29012ef6f0c0708.jpg" class="card-img-top">
+        <div class="card-body text-center">Cajera</div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card">
+        <img src="https://i.pinimg.com/736x/ca/ba/c8/cabac870a29c4881196c842fd072dd4b.jpg" class="card-img-top">
+        <div class="card-body text-center">Digitadora</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <a href="#"><i class="fab fa-github"></i></a>
+    <a href="#"><i class="fab fa-linkedin"></i></a>
+    <a href="#"><i class="fab fa-twitter"></i></a>
+    <div><button class="btn btn-outline-info mt-3" onclick="window.scrollTo({top:0,behavior:'smooth'})">⬆️ Volver Arriba</button></div>
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+  document.getElementById('toggleDark').addEventListener('click', function () {
+    document.body.classList.toggle('dark-mode');
+  });
+
+  // Filtros de proyectos
+  const filterButtons = document.querySelectorAll('.filter-btn');
+  const projects = document.querySelectorAll('.project');
+
+  filterButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const filter = btn.dataset.filter;
+
+      projects.forEach(project => {
+        project.style.display =
+          filter === 'all' || project.classList.contains(filter)
+            ? 'block'
+            : 'none';
+      });
+    });
+  });
+</script>
